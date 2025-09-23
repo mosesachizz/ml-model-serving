@@ -1,0 +1,8 @@
+-r base.txt
+aiofiles==23.2.1
+aiosqlite==0.19.0
+asyncpg==0.29.0
+python-jose==3.3.0
+passlib==1.7.4
+bcrypt==4.0.1
+prometheus-client==0.19.0

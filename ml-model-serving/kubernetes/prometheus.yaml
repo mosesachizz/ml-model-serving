@@ -1,0 +1,18 @@
+apiVersion: monitoring.coreos.com/v1
+kind: Prometheus
+metadata:
+  name: ml-prometheus
+  labels:
+    app: ml-monitoring
+    component: prometheus
+spec:
+  serviceAccountName: prometheus
+  serviceMonitorSelector:
+    matchLabels:
+      app: ml-model-api
+  resources:
+    requests:
+      memory: 400Mi
+    limits:
+      memory: 800Mi
+  enableAdminAPI: false

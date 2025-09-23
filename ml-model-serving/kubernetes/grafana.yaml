@@ -1,0 +1,32 @@
+apiVersion: monitoring.coreos.com/v1
+kind: Grafana
+metadata:
+  name: ml-grafana
+  labels:
+    app: ml-monitoring
+    component: grafana
+spec:
+  deployment:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: grafana
+            resources:
+              requests:
+                memory: 200Mi
+              limits:
+                memory: 400Mi
+  config:
+    security:
+      admin_user: admin
+      admin_password: admin
+    datasources:
+      datasources.yaml:
+        apiVersion: 1
+        datasources:
+        - name: Prometheus
+          type: prometheus
+          url: http://ml-prometheus:9090
+          access: proxy
+          isDefault: true
