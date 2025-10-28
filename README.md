@@ -2,6 +2,37 @@
 
 A production-ready machine learning model serving API with comprehensive MLOps capabilities including model versioning, monitoring, and automated training pipelines.
 
+---
+
+## Problem Statement
+
+Deploying machine learning models to production is often fragmented, fragile, and hard to scale. Teams face:
+
+- **Inconsistent model versions** across environments  
+- **Lack of observability** into inference performance and data drift  
+- **Manual retraining** and deployment with no governance  
+- **Poor scalability** under real-world traffic  
+- **No standardized monitoring** of latency, errors, or throughput  
+
+This leads to **unreliable predictions**, **delayed updates**, and **high operational overhead**.
+
+---
+
+## Solution
+
+This project delivers a **production-grade, end-to-end MLOps platform** that enables:
+
+- **Reliable, versioned model serving** via FastAPI with support for multiple formats  
+- **Real-time monitoring & alerting** using Prometheus and Grafana  
+- **Automated drift detection** and performance tracking  
+- **CI/CD-integrated training pipelines** with model registry  
+- **Scalable, cloud-native deployment** using Docker and Kubernetes  
+- **Observability by design** with latency, error, and throughput metrics  
+
+Result: **Faster, safer, and more reliable ML in production**.
+
+---
+
 ## Features
 
 - **RESTful API** for model predictions with FastAPI  
